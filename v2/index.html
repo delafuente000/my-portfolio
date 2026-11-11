@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jinnel De La Fuente — Construction, Cost, Project Operations</title>
+<meta name="description" content="Jinnel De La Fuente works where construction, cost and project operations overlap.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --ivory:#F3F0EA;
+  --beige:#E7E3DE;
+  --stone:#D7D6D3;
+  --mist:#EDEDEB;
+  --charcoal:#242424;
+  --graphite:#4A4A48;
+  --cobalt:#315EA8;
+  --cobalt-soft:#E6ECF5;
+  --pink:#E7B7C8;
+  --pink-deep:#C97F98;
+  --powder:#BFD5E8;
+  --powder-soft:#EEF4F9;
+  --army:#4E5642;
+  --army-dark:#262E20;
+  --army-mid:#3C4632;
+  --army-soft:#EEF1EA;
+  --ivory-rgb: 243,240,234;
+
+  --serif: 'Fraunces', serif;
+  --sans: 'Space Grotesk', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+
+  --edge: 6vw;
+  --edge-m: 24px;
+  --maxw: 1400px;
+  --ease: cubic-bezier(.22,.8,.28,1);
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; scroll-behavior:auto !important; }
+}
+
+body{
+  margin:0; background:var(--ivory); color:var(--charcoal);
+  font-family:var(--sans); font-size:16px; line-height:1.55;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+a{ color:inherit; text-decoration:none; }
+img{ max-width:100%; display:block; }
+button{ font-family:inherit; }
+::selection{ background:var(--powder); color:var(--charcoal); }
+h1,h2,h3,h4{ margin:0; font-family:var(--serif); font-weight:600; letter-spacing:-0.005em; }
+
+.eyebrow{ font-family:var(--mono); font-size:12px; letter-spacing:0.05em; color:var(--graphite); }
+.wrap{ max-width:var(--maxw); margin:0 auto; padding:0 var(--edge); }
+@media (max-width:720px){ .wrap{ padding:0 var(--edge-m); } }
+
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--mono); font-size:13px; letter-spacing:0.03em;
+  padding:13px 22px; border-radius:100px; border:1.5px solid var(--charcoal); color:var(--charcoal); background:transparent; cursor:pointer;
+  transition:background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease);
+}
+.btn:hover{ background:var(--charcoal); color:var(--ivory); transform:rotate(-1deg); }
+.btn.primary{ background:var(--cobalt); color:var(--ivory); border-color:var(--cobalt); }
+.btn.primary:hover{ background:var(--army); border-color:var(--army); color:var(--ivory); }
+.btn:focus-visible, a:focus-visible, button:focus-visible{ outline:2px solid var(--cobalt); outline-offset:3px; }
+
+.reveal{ opacity:0; transform:translateY(16px); transition:opacity .65s var(--ease), transform .65s var(--ease); }
+.reveal.in{ opacity:1; transform:translateY(0); }
+
+.squiggle{ position:relative; font-style:italic; color:var(--cobalt); white-space:nowrap; }
+.squiggle svg{ position:absolute; left:0; bottom:-6px; width:100%; height:8px; }
+.squiggle.pink{ color:var(--pink-deep); }
+.squiggle.plain{ color:var(--charcoal); font-style:normal; }
+
+.washi{ position:absolute; width:64px; height:20px; opacity:0.9; z-index:2; }
+.washi::before{ content:''; position:absolute; inset:0; background:repeating-linear-gradient(45deg, rgba(255,255,255,0.25) 0 4px, transparent 4px 8px); }
+
+.badge-circle{
+  width:52px; height:52px; border-radius:50%; border:1.5px dashed var(--cobalt);
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  font-family:var(--mono); font-size:13px; color:var(--cobalt);
+}
+
+.dot-scatter span{ position:absolute; border-radius:50%; }
+
+/* ============ NAV ============ */
+header.site-nav{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:20px var(--edge);
+  background:rgba(var(--ivory-rgb), 0); border-bottom:1px solid rgba(36,36,36,0);
+  transition:background .35s var(--ease), border-color .35s var(--ease), padding .35s var(--ease);
+}
+header.site-nav.scrolled{ background:rgba(var(--ivory-rgb), 0.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--stone); padding:13px var(--edge); }
+.wordmark{ display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; font-size:18px; font-style:italic; }
+.wordmark .mark{ width:34px; height:34px; border-radius:50%; background:var(--cobalt); color:var(--ivory); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:11px; font-style:normal; }
+nav.primary-links{ display:flex; gap:30px; }
+nav.primary-links a{ font-family:var(--mono); font-size:12px; letter-spacing:0.04em; position:relative; display:inline-block; transition:transform .25s var(--ease), color .25s var(--ease); }
+nav.primary-links a:hover{ transform:translateY(-2px) rotate(-2deg); color:var(--cobalt); }
+.nav-toggle{ display:none; background:none; border:0; cursor:pointer; padding:6px; }
+.nav-toggle span{ display:block; width:22px; height:1px; background:var(--charcoal); margin:5px 0; }
+@media (max-width:860px){
+  nav.primary-links{ position:fixed; inset:0; top:0; padding:100px var(--edge-m) 40px; background:var(--ivory); flex-direction:column; gap:26px; transform:translateX(100%); transition:transform .4s var(--ease); }
+  nav.primary-links.open{ transform:translateX(0); }
+  nav.primary-links a{ font-size:20px; }
+  .nav-toggle{ display:block; z-index:101; }
+}
+
+/* ============ HERO ============ */
+.hero{ padding:150px var(--edge) 90px; position:relative; overflow:hidden; }
+.dot-scatter{ position:absolute; inset:0; pointer-events:none; z-index:0; }
+.hero-grid{ display:grid; grid-template-columns:1.25fr 1fr; gap:60px; align-items:end; position:relative; z-index:1; }
+.hero-meta{ font-family:var(--mono); font-size:12px; letter-spacing:0.05em; color:var(--cobalt); margin-bottom:18px; display:flex; align-items:center; gap:10px; }
+.hero-meta .dot{ width:6px; height:6px; border-radius:50%; background:var(--army); }
+
+h1.hero-title{ font-size:clamp(38px,6vw,68px); line-height:1.08; max-width:15ch; font-weight:600; }
+h1.hero-title em{ font-style:italic; color:var(--cobalt); font-weight:500; }
+.hero-sub{ font-family:var(--sans); font-size:clamp(15px,1.6vw,17px); color:var(--graphite); max-width:42ch; margin-top:22px; }
+.hero-ctas{ display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; }
+
+.hero-visual{ position:relative; height:100%; min-height:340px; }
+.hero-visual .frag{ position:absolute; border-radius:18px; border:1.5px solid var(--charcoal); background:var(--beige); overflow:hidden; }
+.hero-visual .frag.main{ top:0; right:0; width:78%; height:230px; transform:rotate(-1.4deg); }
+.hero-visual .frag.tech{ bottom:0; left:0; width:54%; height:150px; background:var(--ivory); transform:rotate(2deg); border-color:var(--cobalt); }
+.hero-visual .marker{ position:absolute; font-family:var(--mono); font-size:10px; color:var(--cobalt); letter-spacing:0.04em; }
+.hero-visual .washi.w1{ top:-8px; left:24px; background:var(--powder); transform:rotate(-10deg); border-radius:3px; }
+.hero-visual .washi.w2{ bottom:-8px; right:20%; background:var(--pink); transform:rotate(6deg); border-radius:3px; }
+
+@media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; gap:44px; } .hero-visual{ min-height:220px; } }
+
+/* ============ SECTIONS ============ */
+section{ padding:100px 0; position:relative; }
+section.tight{ padding:70px 0; }
+section.band-mist{ background:var(--mist); }
+section.band-beige{ background:var(--beige); }
+section.band-dark{ background:var(--army-dark); color:var(--ivory); }
+section.band-dark .graphite-text{ color:rgba(243,240,234,0.7); }
+
+.section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:40px; margin-bottom:52px; flex-wrap:wrap; }
+.section-head-inner{ display:flex; align-items:center; gap:20px; }
+.section-head h2{ font-size:clamp(28px,3.6vw,42px); max-width:14ch; }
+.section-head .desc{ font-family:var(--sans); color:var(--graphite); max-width:30ch; font-size:14px; }
+section.band-dark .desc{ color:rgba(243,240,234,0.65); }
+
+/* ============ PRACTICE ============ */
+.practice-cols{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.practice-col{ background:var(--ivory); border:1.5px solid var(--charcoal); border-radius:22px; padding:28px; position:relative; transition:transform .3s var(--ease); }
+.practice-col:hover{ transform:translateY(-4px) rotate(-0.6deg); }
+.practice-col:nth-child(2){ background:var(--cobalt-soft); border-color:var(--cobalt); }
+.practice-col:nth-child(3){ background:var(--army-soft); border-color:var(--army); }
+.practice-col .loc{ font-family:var(--mono); font-size:11px; color:var(--cobalt); letter-spacing:0.04em; }
+.practice-col h3{ font-size:21px; margin-top:8px; margin-bottom:14px; font-style:italic; font-weight:500; }
+.practice-col ul{ list-style:none; margin:0; padding:0; }
+.practice-col li{ font-family:var(--sans); font-size:13px; color:var(--graphite); padding:6px 0; border-top:1px dashed rgba(36,36,36,0.15); }
+.practice-col li:first-child{ border-top:0; }
+@media (max-width:860px){ .practice-cols{ grid-template-columns:1fr; } }
+
+/* ============ PULL STATEMENT ============ */
+.pull{ padding:80px 0; position:relative; }
+.pull .wrap{ display:flex; align-items:center; gap:30px; }
+.pull-text{ font-family:var(--serif); font-style:italic; font-weight:500; font-size:clamp(24px,3.6vw,42px); line-height:1.25; max-width:20ch; color:var(--charcoal); }
+.pull-text .hl{ color:var(--cobalt); }
+@media (max-width:700px){ .pull .wrap{ flex-direction:column; align-items:flex-start; } }
+
+/* ============ SELECTED WORK ============ */
+.case{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; padding:64px 0; align-items:start; border-bottom:1px dashed var(--stone); }
+.case:last-child{ border-bottom:0; }
+.case-media{ aspect-ratio:4/3; border:1.5px solid var(--charcoal); border-radius:18px; position:relative; overflow:hidden; background:var(--beige); }
+.case-media .frame-label{ position:absolute; bottom:10px; left:10px; font-family:var(--mono); font-size:9px; letter-spacing:0.04em; color:var(--charcoal); background:rgba(243,240,234,0.85); padding:4px 9px; border-radius:20px; }
+.case-strip{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:12px; }
+.case-strip .cell{ aspect-ratio:1/1; border:1.5px solid var(--stone); border-radius:14px; position:relative; overflow:hidden; }
+
+.case-body{ display:flex; gap:20px; }
+.case-body .badge-circle{ margin-top:4px; }
+.case-body h3{ font-size:clamp(22px,2.8vw,30px); margin-top:6px; font-weight:600; }
+.case-body .loc-cat{ font-family:var(--mono); font-size:11px; letter-spacing:0.04em; color:var(--graphite); margin-top:8px; }
+.case-body p.context{ font-family:var(--serif); font-style:italic; font-size:16px; color:var(--graphite); margin-top:16px; max-width:44ch; }
+.tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+.tags span{ font-family:var(--mono); font-size:10.5px; padding:6px 12px; border-radius:20px; border:1px solid var(--stone); color:var(--graphite); }
+.tags span:nth-child(4n+1){ border-color:var(--pink); color:var(--pink-deep); background:#FBF0F4; }
+.case-note{ font-family:var(--mono); font-size:11px; color:var(--graphite); margin-top:18px; }
+@media (max-width:860px){ .case{ grid-template-columns:1fr; gap:26px; } .case-body{ flex-direction:column; } }
+.tech-pattern{ position:absolute; inset:0; }
+
+/* ============ TECH DOC GALLERY (dark army) ============ */
+.doc-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+.doc-tile{ background:var(--army-mid); aspect-ratio:3/4; position:relative; overflow:hidden; border-radius:16px; border:1px solid rgba(243,240,234,0.15); }
+.doc-tile .doc-label{ position:absolute; left:0; right:0; bottom:0; padding:9px 11px; background:linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0)); color:var(--ivory); }
+.doc-tile .doc-label .cat{ font-family:var(--mono); font-size:8.5px; letter-spacing:0.05em; opacity:0.8; }
+.doc-tile .doc-label .name{ font-family:var(--sans); font-size:12px; font-weight:600; margin-top:2px; }
+.doc-tile.wide{ grid-column:span 2; }
+@media (max-width:860px){ .doc-grid{ grid-template-columns:repeat(2,1fr); } .doc-tile.wide{ grid-column:span 2; } }
+@media (max-width:520px){ .doc-grid{ grid-template-columns:1fr; } .doc-tile.wide{ grid-column:span 1; } }
+
+.collab-note{ margin-top:28px; padding:22px 26px; border:1.5px dashed var(--powder); border-radius:20px; display:flex; gap:22px; align-items:flex-start; flex-wrap:wrap; }
+.collab-note .tag-big{ font-family:var(--mono); font-size:11px; color:var(--powder); letter-spacing:0.04em; white-space:nowrap; }
+.collab-note p{ font-family:var(--sans); font-size:13.5px; color:rgba(243,240,234,0.75); margin:0; max-width:56ch; }
+
+/* ============ CAPABILITIES ============ */
+.cap-list{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+.cap-card{ border:1.5px solid var(--charcoal); border-radius:20px; padding:26px; transition:transform .3s var(--ease); background:var(--ivory); }
+.cap-card:hover{ transform:translateY(-5px) rotate(-0.7deg); }
+.cap-card:nth-child(1){ background:var(--cobalt-soft); border-color:var(--cobalt); }
+.cap-card:nth-child(2){ background:var(--powder-soft); border-color:var(--powder); }
+.cap-card:nth-child(3){ background:var(--ivory); }
+.cap-card:nth-child(4){ background:var(--army-soft); border-color:var(--army); }
+.cap-card:nth-child(5){ background:#FBF0F4; border-color:var(--pink-deep); }
+.cap-card .cap-num{ font-family:var(--serif); font-style:italic; font-size:34px; color:var(--charcoal); }
+.cap-card h3{ font-size:19px; margin-top:6px; margin-bottom:16px; }
+.cap-card .cap-items{ display:flex; flex-wrap:wrap; gap:7px; }
+.cap-card .cap-items span{ font-family:var(--sans); font-size:12px; color:var(--graphite); padding:5px 11px; border-radius:14px; background:rgba(255,255,255,0.5); }
+
+/* ============ VISUAL COMMUNICATION ============ */
+.vis-intro{ max-width:48ch; font-family:var(--serif); font-style:italic; font-size:16px; color:var(--graphite); margin-bottom:46px; }
+.vis-grid{ columns:4 220px; column-gap:14px; }
+.vis-item{ break-inside:avoid; margin-bottom:14px; position:relative; background:var(--beige); overflow:hidden; border-radius:16px; border:1px solid var(--stone); }
+.vis-item:nth-child(odd){ transform:rotate(-1deg); }
+.vis-item:nth-child(even){ transform:rotate(1deg); }
+.vis-item .cap{ padding:10px 12px; }
+.vis-item .cap .cat{ font-family:var(--mono); font-size:9px; letter-spacing:0.05em; color:var(--cobalt); }
+.vis-item:nth-child(3n) .cap .cat{ color:var(--pink-deep); }
+.vis-item .cap .name{ font-family:var(--sans); font-size:12.5px; margin-top:2px; }
+.vis-disclaimer{ margin-top:26px; font-family:var(--mono); font-size:10.5px; color:var(--graphite); }
+@media (max-width:900px){ .vis-grid{ columns:2 160px; } }
+@media (max-width:520px){ .vis-grid{ columns:1; } }
+
+/* ============ ABOUT ============ */
+.about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:70px; align-items:start; }
+.about-title{ font-size:clamp(30px,4vw,46px); line-height:1.1; font-style:italic; font-weight:500; }
+.about-title .hl{ color:var(--cobalt); font-style:normal; font-weight:600; }
+.about-copy{ font-family:var(--sans); font-size:15px; color:var(--graphite); margin-top:22px; }
+.about-copy p{ margin:0 0 14px; max-width:48ch; }
+.about-stats{ display:flex; flex-direction:column; gap:12px; margin-top:20px; }
+.about-stats .stat{ padding:16px 20px; border-radius:16px; background:var(--mist); display:flex; align-items:baseline; gap:14px; }
+.about-stats .stat:nth-child(1){ background:var(--cobalt-soft); }
+.about-stats .stat:nth-child(2){ background:var(--army-soft); }
+.about-stats .stat:nth-child(3){ background:var(--powder-soft); }
+.about-stats .stat .big{ font-family:var(--serif); font-style:italic; font-size:20px; white-space:nowrap; }
+.about-stats .stat .lab{ font-family:var(--sans); font-size:12px; color:var(--graphite); }
+.geo-meta{ margin-top:22px; font-family:var(--mono); font-size:10.5px; color:var(--graphite); letter-spacing:0.03em; }
+@media (max-width:860px){ .about-grid{ grid-template-columns:1fr; gap:36px; } }
+
+.cred-tools{ display:grid; grid-template-columns:1fr 1fr; gap:60px; margin-top:80px; }
+.cred-list{ display:flex; flex-direction:column; }
+.cred-list .cred{ padding:14px 0; border-top:1px dashed var(--stone); display:flex; justify-content:space-between; gap:20px; align-items:baseline; }
+.cred-list .cred:last-child{ border-bottom:1px dashed var(--stone); }
+.cred-list .cred .name{ font-family:var(--sans); font-size:14px; font-weight:600; }
+.cred-list .cred .loc{ font-family:var(--mono); font-size:10.5px; color:var(--cobalt); }
+.tools-groups{ display:grid; grid-template-columns:1fr 1fr; gap:22px 34px; }
+.tools-groups .tg h4{ font-family:var(--mono); font-size:10.5px; letter-spacing:0.04em; color:var(--cobalt); margin-bottom:9px; font-weight:500; }
+.tools-groups .tg p{ font-family:var(--sans); font-size:13px; color:var(--graphite); margin:0; line-height:1.7; }
+@media (max-width:860px){ .cred-tools{ grid-template-columns:1fr; gap:36px; } }
+
+/* ============ CONTACT (dark army) ============ */
+section.contact{ background:var(--army-dark); color:var(--ivory); padding:120px 0 60px; position:relative; overflow:hidden; }
+section.contact::before{ content:''; position:absolute; top:-70px; right:-50px; width:240px; height:240px; background:var(--pink); opacity:0.18; border-radius:50%; }
+section.contact::after{ content:''; position:absolute; bottom:40px; left:-40px; width:160px; height:160px; background:var(--cobalt); opacity:0.10; border-radius:50%; }
+.contact-head{ display:grid; grid-template-columns:1.3fr 1fr; gap:50px; align-items:end; position:relative; z-index:1; }
+.contact-head h2{ font-size:clamp(32px,5.2vw,60px); color:var(--ivory); max-width:13ch; font-style:italic; font-weight:500; }
+.contact-head h2 .hl{ color:var(--powder); font-style:normal; font-weight:600; }
+.contact-head p{ font-family:var(--sans); color:rgba(243,240,234,0.65); font-size:14.5px; max-width:40ch; margin-top:16px; }
+.contact-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-top:32px; }
+.contact-actions .btn{ border-color:rgba(243,240,234,0.4); color:var(--ivory); }
+.contact-actions .btn:hover{ background:var(--powder); color:var(--charcoal); border-color:var(--powder); }
+.contact-actions .btn.primary{ background:var(--cobalt); color:var(--ivory); border-color:var(--cobalt); }
+.contact-actions .btn.primary:hover{ background:var(--powder); color:var(--charcoal); border-color:var(--powder); }
+.contact-meta{ margin-top:56px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; font-family:var(--mono); font-size:10.5px; letter-spacing:0.04em; color:rgba(243,240,234,0.55); padding-top:22px; border-top:1px dashed rgba(243,240,234,0.2); position:relative; z-index:1; }
+@media (max-width:860px){ .contact-head{ grid-template-columns:1fr; } }
+
+</style>
+</head>
+<body>
+
+<header class="site-nav" id="siteNav">
+  <a href="#top" class="wordmark"><span class="mark">JD</span>De La Fuente</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  <nav class="primary-links" id="navLinks">
+    <a href="#work">Work</a>
+    <a href="#practice">Practice</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="dot-scatter">
+    <span style="top:18%;left:6%;width:8px;height:8px;background:var(--cobalt);"></span>
+    <span style="top:32%;left:14%;width:5px;height:5px;background:var(--powder);"></span>
+    <span style="top:70%;left:9%;width:6px;height:6px;background:var(--army);"></span>
+    <span style="top:60%;left:44%;width:5px;height:5px;background:var(--pink);"></span>
+    <span style="top:14%;left:50%;width:6px;height:6px;background:var(--powder);"></span>
+  </div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <div class="hero-meta"><span class="dot"></span>Cebu, PH — collaborating globally</div>
+      <h1 class="hero-title">Where construction meets its <em>numbers.</em></h1>
+      <p class="hero-sub">Civil Engineer working across estimating, project coordination, cost controls and technical documentation.</p>
+      <div class="hero-ctas">
+        <a href="#work" class="btn primary">View Work</a>
+        <a href="#contact" class="btn">Work With Me</a>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="frag main"><div class="washi w1"></div><div class="marker" style="top:14px;left:14px;">RETAIL FIT-OUT / UK</div></div>
+      <div class="frag tech"><div class="washi w2"></div><div class="marker" style="top:12px;left:12px;">GA-014</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="practice" class="tight">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-head-inner"><span class="badge-circle">01</span><h2>Current practice, three <span class="squiggle">fronts<svg viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 6 Q10 0 20 6 T40 6 T60 6 T80 6 T100 6" stroke="#315EA8" stroke-width="2" fill="none"/></svg></span>.</h2></div>
+      <p class="desc">Estimating, operations and commercial support — three facets of construction, three time zones.</p>
+    </div>
+    <div class="practice-cols reveal">
+      <div class="practice-col">
+        <h3>Cost Estimating</h3>
+        <ul><li>Conceptual &amp; Detailed Estimates</li><li>Quantity Takeoff</li><li>Cost Models / CSI Divisions</li><li>Scope Review</li><li>Value Engineering</li></ul>
+      </div>
+      <div class="practice-col">
+        <h3>Construction Operations</h3>
+        <ul><li>Project Controls</li><li>Job Costing</li><li>Stakeholder Coordination</li><li>Forecasting &amp; Reporting</li><li>Document Control</li></ul>
+      </div>
+      <div class="practice-col">
+        <h3>Construction Commercial Support</h3>
+        <ul><li>Order &amp; Procurement Tracking</li><li>Freight Coordination</li><li>Technical Documentation</li><li>Quotation Support</li><li>Client Communication</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pull">
+  <div class="wrap">
+    <span class="badge-circle" style="border-color:var(--army); color:var(--army);">✦</span>
+    <p class="pull-text reveal">Drawings, costs and schedules — turned into <span class="hl">something usable.</span></p>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-head-inner"><span class="badge-circle" style="border-color:var(--pink-deep); color:var(--pink-deep);">02</span><h2>Five projects, five <span class="squiggle pink">angles<svg viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0 6 Q10 0 20 6 T40 6 T60 6 T80 6 T100 6" stroke="#C97F98" stroke-width="2" fill="none"/></svg></span>.</h2></div>
+    </div>
+
+    <div class="case reveal">
+      <div>
+        <div class="case-media">
+          <svg class="tech-pattern" viewBox="0 0 400 300" preserveAspectRatio="none">
+            <rect width="400" height="300" fill="#E7E3DE"/>
+            <path d="M0 220 L140 140 L230 180 L400 60" stroke="#315EA8" stroke-width="1.2" fill="none" opacity="0.5"/>
+            <rect x="40" y="60" width="120" height="90" fill="none" stroke="#242424" stroke-width="1"/>
+            <circle cx="330" cy="220" r="4" fill="#BFD5E8"/>
+          </svg>
+          <span class="frame-label">Built Result</span>
+        </div>
+        <div class="case-strip">
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F3F0EA"/><path d="M10 90 L90 10" stroke="#315EA8" stroke-width="1"/></svg></div>
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#E7E3DE"/><rect x="20" y="20" width="60" height="60" fill="none" stroke="#242424" stroke-width="1"/></svg></div>
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#BFD5E8" opacity="0.5"/></svg></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <span class="badge-circle">01</span>
+        <div>
+          <h3>Retail Fit-Out</h3>
+          <div class="loc-cat">London, UK — Retail Interior</div>
+          <p class="context">GA documentation, finishes and revisions, storefront to shelf edge.</p>
+          <div class="tags"><span>Cost Estimating</span><span>GA Documentation</span><span>Sections &amp; Elevations</span><span>Supplier Coordination</span></div>
+          <p class="case-note">Estimating, documentation, drafting — within a wider delivery team.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <div>
+        <div class="case-media">
+          <svg class="tech-pattern" viewBox="0 0 400 300" preserveAspectRatio="none">
+            <rect width="400" height="300" fill="#D7D6D3"/>
+            <rect x="60" y="40" width="90" height="220" fill="none" stroke="#242424" stroke-width="1"/>
+            <rect x="170" y="90" width="90" height="170" fill="none" stroke="#242424" stroke-width="1"/>
+            <rect x="280" y="20" width="90" height="240" fill="none" stroke="#315EA8" stroke-width="1"/>
+          </svg>
+          <span class="frame-label">Site — Residential</span>
+        </div>
+        <div class="case-strip">
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#E7E3DE"/><rect x="15" y="15" width="70" height="70" fill="none" stroke="#4A4A48" stroke-width="1"/></svg></div>
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#BFD5E8" opacity="0.5"/></svg></div>
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#D7D6D3"/><circle cx="50" cy="50" r="30" fill="none" stroke="#315EA8" stroke-width="1"/></svg></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <span class="badge-circle" style="border-color:var(--powder); color:var(--graphite);">02</span>
+        <div>
+          <h3>Residential Construction</h3>
+          <div class="loc-cat">Philippines — Multi-Storey Residential</div>
+          <p class="context">Site, cost and program, tracked day to day.</p>
+          <div class="tags"><span>Cost Variations</span><span>AutoCAD Drafting</span><span>Site Supervision</span><span>Progress Claims</span></div>
+          <p class="case-note">Estimates, scheduling, purchase orders, invoicing, coordination.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <div>
+        <div class="case-media">
+          <svg class="tech-pattern" viewBox="0 0 400 300" preserveAspectRatio="none">
+            <rect width="400" height="300" fill="#F3F0EA"/>
+            <rect x="30" y="40" width="340" height="220" fill="none" stroke="#242424" stroke-width="1"/>
+            <line x1="30" y1="140" x2="370" y2="140" stroke="#BFD5E8" stroke-width="1.4"/>
+          </svg>
+          <span class="frame-label">3D Visualization</span>
+        </div>
+        <div class="case-strip">
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#E7E3DE"/><rect x="30" y="30" width="40" height="40" fill="none" stroke="#315EA8" stroke-width="1"/></svg></div>
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F3F0EA"/><path d="M0 80 L50 20 L100 80" stroke="#242424" stroke-width="1" fill="none"/></svg></div>
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#EEF1EA"/></svg></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <span class="badge-circle" style="border-color:var(--army); color:var(--army);">03</span>
+        <div>
+          <h3>Commercial Office Fit-Out</h3>
+          <div class="loc-cat">Cebu, PH — Commercial Interior</div>
+          <p class="context">Office fit-out, drafted, priced, tracked.</p>
+          <div class="tags"><span>2D / 3D Drafting</span><span>Cost Estimates</span><span>Progress Claims</span></div>
+          <p class="case-note">Renderings shown are 3D visualization, not photography.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <div>
+        <div class="case-media">
+          <svg class="tech-pattern" viewBox="0 0 400 300" preserveAspectRatio="none">
+            <rect width="400" height="300" fill="#F3F0EA"/>
+            <g stroke="#242424" stroke-width="0.6" opacity="0.6"><line x1="0" y1="40" x2="400" y2="40"/><line x1="0" y1="90" x2="400" y2="90"/><line x1="0" y1="140" x2="400" y2="140"/></g>
+            <rect x="40" y="60" width="180" height="20" fill="#BFD5E8" opacity="0.7"/>
+            <rect x="40" y="110" width="260" height="20" fill="#E7B7C8" opacity="0.5"/>
+          </svg>
+          <span class="frame-label">Anonymized Cost Model</span>
+        </div>
+        <div class="case-strip">
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#E7E3DE"/><line x1="10" y1="30" x2="90" y2="30" stroke="#242424" stroke-width="0.6"/></svg></div>
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F3F0EA"/><path d="M10 10 L90 10 L90 90 L10 90 Z" fill="none" stroke="#315EA8" stroke-width="1"/></svg></div>
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#BFD5E8" opacity="0.35"/></svg></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <span class="badge-circle" style="border-color:var(--charcoal); color:var(--charcoal);">04</span>
+        <div>
+          <h3>US Cost Estimating</h3>
+          <div class="loc-cat">United States — Independent Estimating</div>
+          <p class="context">Early budgets to construction-document pricing.</p>
+          <div class="tags"><span>Quantity Takeoff</span><span>CSI Divisions</span><span>Value Engineering</span></div>
+          <p class="case-note">Client details withheld. On-Screen Takeoff, Bluebeam, Excel.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <div>
+        <div class="case-media">
+          <svg class="tech-pattern" viewBox="0 0 400 300" preserveAspectRatio="none">
+            <rect width="400" height="300" fill="#F3F0EA"/>
+            <rect x="30" y="30" width="150" height="90" fill="none" stroke="#4A4A48" stroke-width="1"/>
+            <rect x="200" y="30" width="170" height="40" fill="none" stroke="#242424" stroke-width="0.8"/>
+            <line x1="30" y1="180" x2="370" y2="180" stroke="#BFD5E8" stroke-width="1.4"/>
+          </svg>
+          <span class="frame-label">Anonymized Reporting</span>
+        </div>
+        <div class="case-strip">
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#E7E3DE"/></svg></div>
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F3F0EA"/><circle cx="30" cy="30" r="10" fill="none" stroke="#315EA8" stroke-width="1"/></svg></div>
+          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#E7B7C8" opacity="0.3"/></svg></div>
+        </div>
+      </div>
+      <div class="case-body">
+        <span class="badge-circle" style="border-color:var(--pink-deep); color:var(--pink-deep);">05</span>
+        <div>
+          <h3>AU Project Operations</h3>
+          <div class="loc-cat">Australia — Project Controls</div>
+          <p class="context">Costs, claims and forecasts, kept in order.</p>
+          <div class="tags"><span>WIP Tracking</span><span>Variations</span><span>SOP Development</span></div>
+          <p class="case-note">Employer withheld. Xero, Buildertrend, JACK App.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="band-dark">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-head-inner"><span class="badge-circle" style="border-color:var(--powder); color:var(--powder);">03</span><h2>Site to coordinated <span class="squiggle" style="color:var(--powder);">document<svg viewBox="0 0 120 10" preserveAspectRatio="none"><path d="M0 6 Q10 0 20 6 T40 6 T60 6 T80 6 T100 6 T120 6" stroke="#BFD5E8" stroke-width="2" fill="none"/></svg></span>.</h2></div>
+      <p class="desc">Architectural, as-built, plumbing and structural documentation, plus collaborative engineering drafting.</p>
+    </div>
+
+    <div class="doc-grid reveal">
+      <div class="doc-tile wide"><svg class="tech-pattern" viewBox="0 0 300 200" preserveAspectRatio="none"><rect width="300" height="200" fill="#3C4632"/><rect x="20" y="20" width="120" height="80" fill="none" stroke="#F3F0EA" stroke-width="1"/><rect x="160" y="20" width="120" height="160" fill="none" stroke="#BFD5E8" stroke-width="1"/></svg><div class="doc-label"><div class="cat">Architectural</div><div class="name">Commercial Floor Layout</div></div></div>
+      <div class="doc-tile"><svg class="tech-pattern" viewBox="0 0 200 260" preserveAspectRatio="none"><rect width="200" height="260" fill="#3C4632"/><path d="M20 240 L100 20 L180 240" stroke="#F3F0EA" stroke-width="1" fill="none"/></svg><div class="doc-label"><div class="cat">As-Built</div><div class="name">Structural</div></div></div>
+      <div class="doc-tile"><svg class="tech-pattern" viewBox="0 0 200 260" preserveAspectRatio="none"><rect width="200" height="260" fill="#3C4632"/><line x1="20" y1="40" x2="180" y2="40" stroke="#BFD5E8" stroke-width="1"/><circle cx="90" cy="160" r="6" fill="none" stroke="#F3F0EA" stroke-width="1"/></svg><div class="doc-label"><div class="cat">Plumbing</div><div class="name">Sanitary Isometric</div></div></div>
+      <div class="doc-tile"><svg class="tech-pattern" viewBox="0 0 200 260" preserveAspectRatio="none"><rect width="200" height="260" fill="#3C4632"/><path d="M20 230 L180 230 L180 190 L60 190 L60 30" stroke="#F3F0EA" stroke-width="1" fill="none"/></svg><div class="doc-label"><div class="cat">Detail</div><div class="name">Stair Section</div></div></div>
+      <div class="doc-tile"><svg class="tech-pattern" viewBox="0 0 200 260" preserveAspectRatio="none"><rect width="200" height="260" fill="#3C4632"/><rect x="30" y="30" width="140" height="200" fill="none" stroke="#BFD5E8" stroke-width="1"/></svg><div class="doc-label"><div class="cat">Detail</div><div class="name">Retaining Wall</div></div></div>
+      <div class="doc-tile wide"><svg class="tech-pattern" viewBox="0 0 300 200" preserveAspectRatio="none"><rect width="300" height="200" fill="#3C4632"/><line x1="0" y1="100" x2="300" y2="100" stroke="#F3F0EA" stroke-width="0.8"/><path d="M40 100 L60 60 L120 60 L140 100" stroke="#BFD5E8" stroke-width="1" fill="none"/></svg><div class="doc-label"><div class="cat">Architectural</div><div class="name">Field-Verified Topography</div></div></div>
+      <div class="doc-tile"><svg class="tech-pattern" viewBox="0 0 200 260" preserveAspectRatio="none"><rect width="200" height="260" fill="#3C4632"/><rect x="40" y="40" width="120" height="180" fill="none" stroke="#F3F0EA" stroke-width="1"/></svg><div class="doc-label"><div class="cat">As-Built</div><div class="name">Warehouse</div></div></div>
+    </div>
+
+    <div class="collab-note reveal">
+      <span class="tag-big">PH × KR</span>
+      <p>Civil–architectural documentation within a Philippine–Korean engineering collaboration. AutoCAD, coordination, revision.</p>
+    </div>
+  </div>
+</section>
+
+<section id="capabilities">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-head-inner"><span class="badge-circle">04</span><h2>Five moves, every <span class="squiggle">project<svg viewBox="0 0 110 10" preserveAspectRatio="none"><path d="M0 6 Q10 0 20 6 T40 6 T60 6 T80 6 T100 6" stroke="#315EA8" stroke-width="2" fill="none"/></svg></span>.</h2></div>
+    </div>
+    <div class="cap-list reveal">
+      <div class="cap-card"><div class="cap-num">01</div><h3>Estimate</h3><div class="cap-items"><span>Cost Estimating</span><span>Quantity Takeoff</span><span>Value Engineering</span><span>Market Pricing</span></div></div>
+      <div class="cap-card"><div class="cap-num">02</div><h3>Control</h3><div class="cap-items"><span>Job Costing</span><span>WIP Tracking</span><span>Forecasting</span><span>Financial Reporting</span></div></div>
+      <div class="cap-card"><div class="cap-num">03</div><h3>Coordinate</h3><div class="cap-items"><span>Client Communication</span><span>Subcontractor Coordination</span><span>Scheduling</span></div></div>
+      <div class="cap-card"><div class="cap-num">04</div><h3>Document</h3><div class="cap-items"><span>AutoCAD Drafting</span><span>As-Built Docs</span><span>Drawing Registers</span></div></div>
+      <div class="cap-card"><div class="cap-num">05</div><h3>Systemize</h3><div class="cap-items"><span>SOP Development</span><span>Workflow Design</span><span>Quality Checklists</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tight band-beige">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="section-head-inner"><span class="badge-circle" style="border-color:var(--army); color:var(--army);">05</span><h2>The eye behind the <span class="squiggle plain">numbers<svg viewBox="0 0 120 10" preserveAspectRatio="none"><path d="M0 6 Q10 0 20 6 T40 6 T60 6 T80 6 T100 6 T120 6" stroke="#4A4A48" stroke-width="2" fill="none"/></svg></span>.</h2></div>
+    </div>
+    <p class="vis-intro reveal">Self-taught over 11+ years, presentation and print work for clients across the US, Canada and India — still shaping how I structure information today.</p>
+
+    <div class="vis-grid reveal">
+      <div class="vis-item"><svg viewBox="0 0 200 260" preserveAspectRatio="none"><rect width="200" height="260" fill="#BFD5E8"/><rect x="20" y="30" width="160" height="6" fill="#242424"/></svg><div class="cap"><div class="cat">Presentation</div><div class="name">Deck Cover Layout</div></div></div>
+      <div class="vis-item"><svg viewBox="0 0 200 300" preserveAspectRatio="none"><rect width="200" height="300" fill="#EEF1EA"/><line x1="20" y1="40" x2="180" y2="40" stroke="#242424" stroke-width="1"/></svg><div class="cap"><div class="cat">Editorial</div><div class="name">Newsletter Spread</div></div></div>
+      <div class="vis-item"><svg viewBox="0 0 200 220" preserveAspectRatio="none"><rect width="200" height="220" fill="#D7D6D3"/><rect x="30" y="30" width="140" height="80" fill="#315EA8" opacity="0.3"/></svg><div class="cap"><div class="cat">Brochure</div><div class="name">Tri-Fold Layout</div></div></div>
+      <div class="vis-item"><svg viewBox="0 0 200 300" preserveAspectRatio="none"><rect width="200" height="300" fill="#F3F0EA"/><circle cx="100" cy="100" r="50" fill="none" stroke="#E7B7C8" stroke-width="2"/></svg><div class="cap"><div class="cat">Brand</div><div class="name">Mark Exploration</div></div></div>
+      <div class="vis-item"><svg viewBox="0 0 200 240" preserveAspectRatio="none"><rect width="200" height="240" fill="#E7E3DE"/><rect x="0" y="180" width="200" height="60" fill="#242424"/></svg><div class="cap"><div class="cat">Catalogue</div><div class="name">Product Grid</div></div></div>
+      <div class="vis-item"><svg viewBox="0 0 200 280" preserveAspectRatio="none"><rect width="200" height="280" fill="#F3F0EA"/><path d="M0 200 L200 160" stroke="#315EA8" stroke-width="2"/></svg><div class="cap"><div class="cat">Marketing</div><div class="name">Vehicle Graphic</div></div></div>
+      <div class="vis-item"><svg viewBox="0 0 200 220" preserveAspectRatio="none"><rect width="200" height="220" fill="#BFD5E8" opacity="0.5"/><rect x="20" y="20" width="60" height="60" fill="#242424" opacity="0.3"/></svg><div class="cap"><div class="cat">Training</div><div class="name">Module Layout</div></div></div>
+      <div class="vis-item"><svg viewBox="0 0 200 260" preserveAspectRatio="none"><rect width="200" height="260" fill="#D7D6D3"/><circle cx="60" cy="80" r="30" fill="none" stroke="#242424" stroke-width="1"/><circle cx="130" cy="150" r="20" fill="none" stroke="#E7B7C8" stroke-width="1.5"/></svg><div class="cap"><div class="cat">Merchandise</div><div class="name">Graphic Study</div></div></div>
+    </div>
+    <p class="vis-disclaimer reveal">Design and artwork by Jinnel De La Fuente. Third-party mockup templates used where applicable.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="eyebrow" style="color:var(--cobalt);">About</span>
+        <h2 class="about-title" style="margin-top:14px;">Engineering brain.<br><span class="hl">Design eye.</span></h2>
+      </div>
+      <div class="reveal">
+        <div class="about-copy">
+          <p>Licensed Civil Engineer and Master Plumber, based in Cebu. Construction, fit-out, estimating, documentation, controls and systems.</p>
+          <p>Started in Philippine construction, now working with teams across Australia, the US, the UK and South Korea.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat"><div class="big">7 Years</div><div class="lab">Construction &amp; project experience</div></div>
+          <div class="stat"><div class="big">Local + Global</div><div class="lab">PH foundations, international practice</div></div>
+          <div class="stat"><div class="big">Estimate → Control → Document</div><div class="lab">End-to-end project support</div></div>
+        </div>
+        <div class="geo-meta">PH · AU · US · UK · Middle East · KR · CA · IN</div>
+      </div>
+    </div>
+
+    <div class="cred-tools">
+      <div class="reveal">
+        <span class="eyebrow">Credentials</span>
+        <div class="cred-list">
+          <div class="cred"><span class="name">Licensed Civil Engineer</span><span class="loc">Philippines</span></div>
+          <div class="cred"><span class="name">Licensed Master Plumber</span><span class="loc">Philippines</span></div>
+          <div class="cred"><span class="name">Safety Officer 2</span><span class="loc"></span></div>
+          <div class="cred"><span class="name">Authorized Managing Officer</span><span class="loc"></span></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Tools</span>
+        <div class="tools-groups">
+          <div class="tg"><h4>Estimating</h4><p>On-Screen Takeoff, Bluebeam, Excel, D-Tools</p></div>
+          <div class="tg"><h4>Drafting</h4><p>AutoCAD, SketchUp, Visio</p></div>
+          <div class="tg"><h4>Project Ops</h4><p>Buildertrend, JACK App, Xero, Asana, Salesforce</p></div>
+          <div class="tg"><h4>Visual</h4><p>Photoshop, Illustrator, Canva</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-head reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--powder)">Need Project Support?</span>
+        <h2 style="margin-top:12px;">Let's talk about <span class="hl">your next project.</span></h2>
+        <p>Full-time, part-time, contract or project-based — estimating, coordination, controls, documentation.</p>
+        <div class="contact-actions">
+          <a href="mailto:hello@jinneldelafuente.com" class="btn primary">Email</a>
+          <a href="https://linkedin.com" class="btn">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-meta">
+      <span>Cebu, Philippines / UTC +8</span>
+      <span>Remote Collaboration / International</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+},{ threshold:0.12, rootMargin:'0px 0px -60px 0px' });
+revealEls.forEach(el=>io.observe(el));
+
+const nav = document.getElementById('siteNav');
+window.addEventListener('scroll', ()=>{
+  if(window.scrollY > 40){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+}, { passive:true });
+
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', ()=> navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=> a.addEventListener('click', ()=> navLinks.classList.remove('open')));
+</script>
+
+</body>
+</html>
