@@ -136,7 +136,9 @@ nav.primary-links a:hover::after{ transform:scaleX(1); }
 .hero-visual .frag{ position:absolute; border:1px solid var(--charcoal); background:var(--beige); overflow:hidden; }
 .hero-visual .frag.main{ top:0; right:0; width:80%; height:230px; transform:rotate(1.2deg); }
 .hero-visual .frag.tech{ bottom:0; left:0; width:52%; height:150px; background:var(--ivory); transform:rotate(-1.5deg); border-color:var(--cobalt); }
-.hero-visual .marker{ position:absolute; font-family:var(--mono); font-size:10px; color:var(--cobalt); letter-spacing:0.05em; }
+.hero-visual .marker{  
+.hero-visual .frag img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.hero-visual .marker{ z-index:2; background:rgba(243,240,234,0.85); padding:3px 8px; } position:absolute; font-family:var(--mono); font-size:10px; color:var(--cobalt); letter-spacing:0.05em; }
 .hero-visual .swatch{ position:absolute; bottom:-22px; right:14%; width:56px; height:56px; background:var(--pink); transform:rotate(-6deg); z-index:2; }
 
 @media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; gap:44px; } .hero-visual{ min-height:220px; } .hero::before{ display:none; } }
@@ -312,8 +314,8 @@ section.contact::before{ content:''; position:absolute; top:-60px; right:-60px; 
       </div>
     </div>
     <div class="hero-visual reveal">
-      <div class="frag main"><div class="marker" style="top:10px;left:10px;">RETAIL FIT-OUT / UK</div></div>
-      <div class="frag tech"><div class="marker" style="top:10px;left:10px;">GA-014</div></div>
+      <div class="frag main"><img src="images/hero-main.jpg" alt="Retail fit-out, London UK"><div class="marker" style="top:10px;left:10px;">RETAIL FIT-OUT / UK</div></div>
+      <div class="frag tech"><img src="images/hero-drawing.jpg" alt="GA-014 general arrangement drawing"><div class="marker" style="top:10px;left:10px;">GA-014</div></div>
       <div class="swatch"></div>
     </div>
   </div>
