@@ -198,6 +198,7 @@ section.band-beige{ background:var(--beige); }
 
 @media (max-width:860px){ .case{ grid-template-columns:1fr; gap:26px; } .case:nth-child(even){ direction:ltr; } }
 .tech-pattern{ position:absolute; inset:0; }
+.case-media img, .case-strip .cell img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 
 /* ============ TECH DOC GALLERY ============ */
 .doc-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
@@ -357,23 +358,17 @@ section.contact::before{ content:''; position:absolute; top:-60px; right:-60px; 
     </div>
 
     <div class="case reveal">
-      <div>
-        <div class="case-media offset-frame">
-          <svg class="tech-pattern" viewBox="0 0 400 300" preserveAspectRatio="none">
-            <rect width="400" height="300" fill="#E7E3DE"/>
-            <path d="M0 220 L140 140 L230 180 L400 60" stroke="#315EA8" stroke-width="1.2" fill="none" opacity="0.5"/>
-            <rect x="40" y="60" width="120" height="90" fill="none" stroke="#242424" stroke-width="1"/>
-            <line x1="0" y1="260" x2="400" y2="260" stroke="#4A4A48" stroke-width="0.6"/>
-            <circle cx="330" cy="220" r="3" fill="#E7B7C8"/>
-          </svg>
-          <span class="frame-label">Built Result</span>
-        </div>
-        <div class="case-strip">
-          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F3F0EA"/><path d="M10 90 L90 10" stroke="#315EA8" stroke-width="1"/></svg></div>
-          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#E7E3DE"/><rect x="20" y="20" width="60" height="60" fill="none" stroke="#242424" stroke-width="1"/></svg></div>
-          <div class="cell"><svg class="tech-pattern" viewBox="0 0 100 100"><rect width="100" height="100" fill="#E7B7C8" opacity="0.5"/></svg></div>
-        </div>
-      </div>
+     <div>
+  <div class="case-media offset-frame">
+    <img src="images/retail-1.jpg" alt="Retail fit-out private office, London UK">
+    <span class="frame-label">Built Result</span>
+  </div>
+  <div class="case-strip">
+    <div class="cell"><img src="images/retail-2.jpg" alt="Curved consultation desks"></div>
+    <div class="cell"><img src="images/retail-3.jpg" alt="Store overview with feature wall"></div>
+    <div class="cell"><img src="images/retail-4.jpg" alt="Digital screen and seating display"></div>
+  </div>
+</div>
       <div class="case-body">
         <span class="num">01</span>
         <h3>Retail Fit-Out</h3>
