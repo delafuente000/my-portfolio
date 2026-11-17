@@ -119,7 +119,7 @@ nav.primary-links a:hover::after{ transform:scaleX(1); }
 /* ============ HERO ============ */
 .hero{ padding:150px var(--edge) 90px; position:relative; overflow:hidden; }
 .dot-scatter{ position:absolute; inset:0; pointer-events:none; z-index:0; }
-.hero-grid{ display:grid; grid-template-columns:1.05fr 1fr; gap:48px; align-items:end; position:relative; z-index:1; }
+.hero-grid{ display:grid; grid-template-columns:1fr; gap:48px; align-items:end; position:relative; z-index:1; }
 .hero-meta{ font-family:var(--mono); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--cobalt); margin-bottom:18px; display:flex; align-items:center; gap:10px; }
 .hero-meta .dot{ width:6px; height:6px; border-radius:50%; background:var(--pink-deep); }
 
@@ -128,10 +128,6 @@ h1.hero-title em{ font-style:italic; color:var(--cobalt); font-weight:800; }
 .hero-sub{ font-family:var(--body); font-style:italic; font-size:clamp(15px,1.6vw,18px); color:var(--graphite); max-width:40ch; margin-top:26px; }
 .hero-ctas{ display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; }
 
-.hero-visual{ position:relative; align-self:center; }
-.hero-visual svg{ width:100%; height:auto; display:block; }
-.hero-visual .washi.w1{ top:-8px; left:24px; background:var(--powder); transform:rotate(-10deg); border-radius:3px; }
-.hero-visual .washi.w2{ bottom:-8px; right:20%; background:var(--pink); transform:rotate(6deg); border-radius:3px; }
 
 @media (max-width:900px){ .hero-grid{ grid-template-columns:1fr; gap:44px; } }
 
@@ -185,24 +181,11 @@ section.band-dark .desc{ color:rgba(243,240,234,0.65); }
 .tags span:nth-child(3n+1){ border-color:var(--pink); color:var(--pink-deep); background:#FBF0F4; }
 .case-note{ font-family:var(--mono); font-size:11px; color:var(--graphite); margin-top:18px; }
 @media (max-width:860px){ .case{ grid-template-columns:1fr; gap:26px; } .case-body{ flex-direction:column; } }
-.tech-pattern{ position:absolute; inset:0; width:100%; height:100%; }
 .case-media img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 .case-media svg > rect:first-child{ fill:var(--beige); }
 .squiggle{ font-family:var(--body); font-weight:400; }
 
-/* ============ TECH DOC GALLERY (dark army) ============ */
-.doc-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
-.doc-tile{ background:var(--army-mid); aspect-ratio:3/4; position:relative; overflow:hidden; border-radius:16px; }
-.doc-tile .doc-label{ position:absolute; left:0; right:0; bottom:0; padding:9px 11px; background:linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0)); color:var(--ivory); }
-.doc-tile .doc-label .cat{ font-family:var(--mono); font-size:8.5px; letter-spacing:0.06em; text-transform:uppercase; opacity:0.8; }
-.doc-tile .doc-label .name{ font-family:var(--sans); font-size:12px; font-weight:600; margin-top:2px; }
-.doc-tile.wide{ grid-column:span 2; aspect-ratio:auto; }
-@media (max-width:860px){ .doc-grid{ grid-template-columns:repeat(2,1fr); } .doc-tile.wide{ grid-column:span 2; aspect-ratio:3/2; } }
-@media (max-width:520px){ .doc-grid{ grid-template-columns:1fr; } .doc-tile.wide{ grid-column:span 1; } }
 
-.collab-note{ margin-top:28px; padding:22px 26px; border:1.5px dashed var(--powder); border-radius:20px; display:flex; gap:22px; align-items:flex-start; flex-wrap:wrap; }
-.collab-note .tag-big{ font-family:var(--mono); font-size:11px; color:var(--powder); letter-spacing:0.04em; white-space:nowrap; }
-.collab-note p{ font-family:var(--body); font-size:13.5px; color:rgba(243,240,234,0.75); margin:0; max-width:56ch; }
 
 /* ============ CAPABILITIES ============ */
 .cap-list{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
@@ -221,17 +204,7 @@ section.band-dark .desc{ color:rgba(243,240,234,0.65); }
 .cap-card .cap-items span{ font-family:var(--body); font-size:12.5px; color:var(--graphite); padding:5px 11px; border-radius:14px; background:rgba(255,255,255,0.5); }
 
 /* ============ VISUAL COMMUNICATION ============ */
-.vis-intro{ max-width:48ch; font-family:var(--body); font-style:italic; font-size:15px; color:var(--graphite); margin-bottom:46px; }
-.vis-grid{ columns:3 220px; column-gap:14px; }
-.vis-item{ break-inside:avoid; margin-bottom:14px; position:relative; background:var(--beige); overflow:hidden; border-radius:16px; }
-.vis-item:nth-child(odd){ transform:rotate(-1deg); }
-.vis-item:nth-child(even){ transform:rotate(1deg); }
-.vis-item .cap{ padding:10px 12px; }
-.vis-item .cap .cat{ font-family:var(--mono); font-size:9px; letter-spacing:0.06em; text-transform:uppercase; color:var(--pink-deep); }
-.vis-item .cap .name{ font-family:var(--sans); font-size:12.5px; margin-top:2px; }
-.vis-disclaimer{ margin-top:26px; font-family:var(--mono); font-size:10.5px; color:var(--graphite); }
-@media (max-width:900px){ .vis-grid{ columns:2 160px; } }
-@media (max-width:520px){ .vis-grid{ columns:1; } }
+.vis-intro{ max-width:48ch; font-family:var(--body); font-style:italic; font-size:15px; color:var(--graphite); margin-bottom:0; }
 
 /* ============ ABOUT ============ */
 .about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:70px; align-items:start; }
@@ -281,7 +254,6 @@ section.contact{ background:var(--army-dark); color:var(--ivory); padding:120px 
 .hero-title-stack .line{ font-family:var(--display); font-weight:800; letter-spacing:-0.02em; font-size:clamp(44px,6.6vw,96px); line-height:0.94; color:var(--charcoal); }
 .hero-title-stack .line.blue{ color:var(--cobalt); }
 .hero-title-stack .line.outline{ -webkit-text-stroke:1.5px var(--charcoal); color:transparent; }
-.hero-visual svg{ transform:rotate(-1deg); }
 .dot-scatter span.sparkle{ width:auto; height:auto; border-radius:0; background:none; font-size:16px; line-height:1; }
 .pull-text .hl{ background:linear-gradient(transparent 64%, rgba(231,183,200,0.55) 64%); padding:0 4px; }
 .case-media{ transition:transform .35s var(--ease); }
@@ -290,10 +262,6 @@ section.contact{ background:var(--army-dark); color:var(--ivory); padding:120px 
 .case .case-media:hover{ transform:rotate(0deg); }
 .case-media::after{ content:''; position:absolute; top:12px; left:-20px; width:84px; height:22px; background:repeating-linear-gradient(45deg, rgba(255,255,255,0.3) 0 4px, transparent 4px 8px), var(--pink); opacity:0.9; transform:rotate(-36deg); z-index:2; }
 .case:nth-child(even) .case-media::after{ background:repeating-linear-gradient(45deg, rgba(255,255,255,0.3) 0 4px, transparent 4px 8px), var(--powder); }
-.doc-tile{ transition:transform .3s var(--ease); }
-.doc-tile:nth-child(odd){ transform:rotate(-0.7deg); }
-.doc-tile:nth-child(even){ transform:rotate(0.7deg); }
-.doc-tile:hover{ transform:rotate(0deg) translateY(-3px); }
 .tags span, .cap-card .cap-items span{ transition:transform .25s var(--ease); }
 .tags span:hover, .cap-card .cap-items span:hover{ transform:rotate(-2deg) translateY(-1px); }
 </style>
@@ -338,7 +306,8 @@ section.contact{ background:var(--army-dark); color:var(--ivory); padding:120px 
         <a href="#contact" class="btn">Work With Me</a>
       </div>
     </div>
-    </section>
+  </div>
+</section>
 
 <section id="practice" class="tight">
   <div class="wrap">
@@ -470,7 +439,6 @@ section.contact{ background:var(--army-dark); color:var(--ivory); padding:120px 
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -481,16 +449,6 @@ section.contact{ background:var(--army-dark); color:var(--ivory); padding:120px 
       <p class="desc">Architectural, as-built, plumbing and structural documentation, plus collaborative engineering drafting.</p>
     </div>
 
-    <div class="doc-grid reveal">
-      <div class="doc-tile wide"><svg class="tech-pattern" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#242424"><rect width="600" height="400" fill="#E7E3DE" stroke="none"/><rect x="60" y="70" width="480" height="240" stroke-width="2.4"/><path d="M260 70 V200 H540 M260 310 V250 M180 310 V270 M180 270 A40 40 0 0 1 220 310"/><path d="M60 40 H540 M60 32 V48 M540 32 V48" stroke="#315EA8"/><circle cx="60" cy="350" r="14" stroke="#315EA8"/><rect x="400" y="230" width="60" height="40" fill="#E7B7C8" stroke="none" opacity=".7"/></svg><div class="doc-label"><div class="cat">Architectural</div><div class="name">Commercial Floor Layout</div></div></div>
-      <div class="doc-tile"><svg class="tech-pattern" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" fill="none"><rect width="300" height="400" fill="#BFD5E8" opacity=".5"/><path d="M50 300 L130 255 V175 L230 120" stroke="#315EA8" stroke-width="3"/><circle cx="130" cy="255" r="5" stroke="#242424"/><circle cx="130" cy="175" r="5" stroke="#242424"/><path d="M230 120 V80" stroke="#242424" stroke-width="1.2"/></svg><div class="doc-label"><div class="cat">Plumbing</div><div class="name">Sanitary Isometric</div></div></div>
-      <div class="doc-tile"><svg class="tech-pattern" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#242424"><rect width="300" height="400" fill="#E7E3DE" stroke="none"/><path d="M40 330 H90 V290 H140 V250 H190 V210 H240 V170 H280" stroke-width="2"/><path d="M40 350 H110 V310 H160 V270 H210 V230 H260 V190 H280" stroke-width=".8"/><path d="M40 360 H280" stroke="#315EA8"/><path d="M60 90 l8 -14 l8 14Z" stroke="#315EA8"/></svg><div class="doc-label"><div class="cat">Detail</div><div class="name">Stair Section</div></div></div>
-    </div>
-
-    <div class="collab-note reveal">
-      <span class="tag-big">PH × KR</span>
-      <p>Civil–architectural documentation within a Philippine–Korean engineering collaboration. AutoCAD, coordination, revision.</p>
-    </div>
   </div>
 </section>
 
@@ -512,19 +470,9 @@ section.contact{ background:var(--army-dark); color:var(--ivory); padding:120px 
 <section class="tight band-beige">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="section-head-inner"><span class="badge-circle">05</span><h2>The eye behind the <span class="squiggle plain">numbers<svg viewBox="0 0 120 10" preserveAspectRatio="none"><path d="M0 6 Q10 0 20 6 T40 6 T60 6 T80 6 T100 6 T120 6" stroke="#C97F98" stroke-width="2" fill="none"/></svg></span>.</h2></div>
+      <div class="section-head-inner"><span class="badge-circle">05</span><h2>Graphic Design & <span class="squiggle plain">Visualization<svg viewBox="0 0 120 10" preserveAspectRatio="none"><path d="M0 6 Q10 0 20 6 T40 6 T60 6 T80 6 T100 6 T120 6" stroke="#C97F98" stroke-width="2" fill="none"/></svg></span>.</h2></div>
     </div>
     <p class="vis-intro reveal">Self-taught over 11+ years, presentation and print work for clients across the US, Canada and India — still shaping how I structure information today.</p>
-
-    <div class="vis-grid reveal">
-      <div class="vis-item"><svg viewBox="0 0 200 260" preserveAspectRatio="none"><rect width="200" height="260" fill="#E7B7C8"/><rect x="20" y="30" width="160" height="6" fill="#242424"/></svg><div class="cap"><div class="cat">Presentation</div><div class="name">Deck Cover Layout</div></div></div>
-      <div class="vis-item"><svg viewBox="0 0 200 300" preserveAspectRatio="none"><rect width="200" height="300" fill="#BFD5E8"/><line x1="20" y1="40" x2="180" y2="40" stroke="#242424" stroke-width="1"/></svg><div class="cap"><div class="cat">Editorial</div><div class="name">Newsletter Spread</div></div></div>
-      <div class="vis-item"><svg viewBox="0 0 200 220" preserveAspectRatio="none"><rect width="200" height="220" fill="#D7D6D3"/><rect x="30" y="30" width="140" height="80" fill="#315EA8" opacity="0.3"/></svg><div class="cap"><div class="cat">Brochure</div><div class="name">Tri-Fold Layout</div></div></div>
-      <div class="vis-item"><svg viewBox="0 0 200 300" preserveAspectRatio="none"><rect width="200" height="300" fill="#F3F0EA"/><circle cx="100" cy="100" r="50" fill="none" stroke="#E7B7C8" stroke-width="2"/></svg><div class="cap"><div class="cat">Brand</div><div class="name">Mark Exploration</div></div></div>
-      <div class="vis-item"><svg viewBox="0 0 200 240" preserveAspectRatio="none"><rect width="200" height="240" fill="#E7E3DE"/><rect x="0" y="180" width="200" height="60" fill="#242424"/></svg><div class="cap"><div class="cat">Catalogue</div><div class="name">Product Grid</div></div></div>
-      <div class="vis-item"><svg viewBox="0 0 200 220" preserveAspectRatio="none"><rect width="200" height="220" fill="#E7B7C8" opacity="0.5"/><rect x="20" y="20" width="60" height="60" fill="#242424" opacity="0.3"/></svg><div class="cap"><div class="cat">Training</div><div class="name">Module Layout</div></div></div>
-    </div>
-    <p class="vis-disclaimer reveal">Design and artwork by Jinnel De La Fuente. Third-party mockup templates used where applicable.</p>
   </div>
 </section>
 
